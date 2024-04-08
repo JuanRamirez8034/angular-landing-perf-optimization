@@ -1,0 +1,4 @@
+<picture>
+  <source [media]="source.media" [srcset]="source.srcset" *ngFor="let source of resizeSources">
+  <img [src]="source" [alt]="alt" loading="lazy" decoding="async">
+</picture>
