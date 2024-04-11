@@ -8,19 +8,21 @@
   </div>
   <div class="stats__block">
     <div class="flex--horizontal">
-      <h5 class="stats__name">A/B Split</h5>
+      <h4 class="stats__name">A/B Split</h4>
       <h4 class="font-fjalla stats__result">A/B</h4>
     </div>
     <div class="stats">
-      <canvas
-        baseChart
-        [type]="'line'"
-        [data]="dataSet1"
-        [options]="lineChartOptions"
-        [legend]="false"
-        height="100"
-      >
-      </canvas>
+      @if(platformIsBrowser){
+        <canvas
+          baseChart
+          [type]="'line'"
+          [data]="dataSet1"
+          [options]="lineChartOptions"
+          [legend]="false"
+          height="100"
+        >
+        </canvas>
+      }
     </div>
   </div>
   <div class="stats__block">
@@ -29,15 +31,17 @@
       <h4 class="font-fjalla stats__result">89%</h4>
     </div>
     <div class="stats">
-      <canvas
-        baseChart
-        [type]="'bar'"
-        [data]="dataSet2"
-        [options]="barChartOptions"
-        [legend]="false"
-        height="100"
-      >
-      </canvas>
+      @if(platformIsBrowser){
+        <canvas
+          baseChart
+          [type]="'bar'"
+          [data]="dataSet2"
+          [options]="barChartOptions"
+          [legend]="false"
+          height="100"
+        >
+        </canvas>
+      }
     </div>
   </div>
   <div class="stats__block">
@@ -46,15 +50,17 @@
       <h4 class="font-fjalla stats__result">100</h4>
     </div>
     <div class="stats">
-      <canvas
-        baseChart
-        [type]="'line'"
-        [data]="dataSet3"
-        [options]="lineChartOptions"
-        [legend]="false"
-        height="100"
-      >
-      </canvas>
+      @if(platformIsBrowser){
+        <canvas
+          baseChart
+          [type]="'line'"
+          [data]="dataSet3"
+          [options]="lineChartOptions"
+          [legend]="false"
+          height="100"
+        >
+        </canvas>
+      }
     </div>
   </div>
   <div class="stats__block">
@@ -63,15 +69,17 @@
       <h4 class="font-fjalla stats__result">81rps</h4>
     </div>
     <div class="stats">
-      <canvas
-        baseChart
-        [type]="'line'"
-        [data]="dataSet4"
-        [options]="lineChartOptions"
-        [legend]="false"
-        height="100"
-      >
-      </canvas>
+      @if(platformIsBrowser){
+        <canvas
+          baseChart
+          [type]="'line'"
+          [data]="dataSet4"
+          [options]="lineChartOptions"
+          [legend]="false"
+          height="100"
+        >
+        </canvas>
+      }
     </div>
   </div>
   <div class="stats__block">
@@ -80,15 +88,17 @@
       <h4 class="font-fjalla stats__result">93%</h4>
     </div>
     <div class="stats">
-      <canvas
-        baseChart
-        [type]="'bar'"
-        [data]="dataSet5"
-        [options]="barChartOptions"
-        [legend]="false"
-        height="100"
-      >
-      </canvas>
+      @if(platformIsBrowser){
+        <canvas
+          baseChart
+          [type]="'bar'"
+          [data]="dataSet5"
+          [options]="barChartOptions"
+          [legend]="false"
+          height="100"
+        >
+        </canvas>
+      }
     </div>
   </div>
   <div class="stats__block">
@@ -97,15 +107,17 @@
       <h4 class="font-fjalla stats__result">1.98ms</h4>
     </div>
     <div class="stats">
-      <canvas
-        baseChart
-        [type]="'line'"
-        [data]="dataSet6"
-        [options]="lineChartOptions"
-        [legend]="false"
-        height="100"
-      >
-      </canvas>
+      @if(platformIsBrowser){
+        <canvas
+          baseChart
+          [type]="'line'"
+          [data]="dataSet6"
+          [options]="lineChartOptions"
+          [legend]="false"
+          height="100"
+        >
+        </canvas>
+      }
     </div>
   </div>
 </section>

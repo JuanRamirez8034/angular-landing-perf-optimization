@@ -21,10 +21,10 @@
         </ng-template>
       </swiper>
       <div class="slide-controls">
-        <button (click)="slidePrev()">
+        <button type="button" aria-label="slider button left" (click)="slidePrev()">
           <fa-icon [icon]="faAngleLeft"></fa-icon>
         </button>
-        <button (click)="slideNext()">
+        <button type="button" aria-label="slider button right" (click)="slideNext()">
           <fa-icon [icon]="faAngleRight"></fa-icon>
         </button>
       </div>

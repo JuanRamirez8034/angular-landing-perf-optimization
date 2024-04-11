@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 // import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 // import { NgChartsModule } from 'ng2-charts';
 // import { SwiperModule } from 'swiper/angular';
@@ -40,7 +40,9 @@ import { AppComponent } from './app.component';
     // FontAwesomeModule,
     // SwiperModule,
   ],
-  providers: [],
+  providers: [
+    provideClientHydration()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

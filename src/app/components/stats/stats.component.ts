@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { ChartOptions } from 'chart.js';
 
 @Component({
@@ -7,6 +8,10 @@ import { ChartOptions } from 'chart.js';
   styleUrls: ['./stats.component.scss'],
 })
 export class StatsComponent {
+
+  private _plataformId : Object = inject(PLATFORM_ID);
+  public platformIsBrowser : boolean = isPlatformBrowser(this._plataformId) ;
+
   dataSet1 = this.getGeneratedLineData(this.randomArray(30, 1000));
   dataSet2 = this.getGeneratedBarData(this.randomArray(30, 1000));
   dataSet3 = this.getGeneratedLineData(this.randomArray(30, 1000));
