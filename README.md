@@ -1,5 +1,9 @@
 # Landing - Angular
 
+```txt
+  Ya resuelto!!
+```
+
 Este en proyecto está la landing de un producto, el cual tiene toda la información necesaria de lanzamiento.
 
 - [Instalación](#instalación)
