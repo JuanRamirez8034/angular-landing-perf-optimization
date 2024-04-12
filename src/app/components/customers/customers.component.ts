@@ -1,5 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { IntersectionStatus } from 'src/app/directives/from-intersection-observer';
 import { SwiperOptions } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
@@ -17,6 +18,8 @@ interface Customer {
   styleUrls: ['./customers.component.scss'],
 })
 export class CustomersComponent {
+  public status : IntersectionStatus = IntersectionStatus.NotVisible;
+
   faAngleLeft = faAngleLeft;
   faAngleRight = faAngleRight;
 
@@ -48,6 +51,10 @@ export class CustomersComponent {
   @ViewChild('swiper', { static: false }) swiper?: SwiperComponent;
 
   constructor() {}
+
+  public onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
+  }
 
   slideNext() {
     this.swiper?.swiperRef?.slideNext();

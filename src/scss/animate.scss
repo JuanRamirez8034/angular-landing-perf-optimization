@@ -4,6 +4,7 @@
 }
 
 .fadeInUp {
+  opacity: 0;
   animation: fadeInUp 1s ease-in-out;
   animation-fill-mode: forwards;
 }

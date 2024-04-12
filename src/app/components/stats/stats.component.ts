@@ -1,6 +1,7 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, PLATFORM_ID, inject } from '@angular/core';
 import { ChartOptions } from 'chart.js';
+import { IntersectionStatus } from 'src/app/directives/from-intersection-observer';
 
 @Component({
   selector: 'app-stats',
@@ -9,6 +10,7 @@ import { ChartOptions } from 'chart.js';
 })
 export class StatsComponent {
 
+  public status : IntersectionStatus = IntersectionStatus.NotVisible;
   private _plataformId : Object = inject(PLATFORM_ID);
   public platformIsBrowser : boolean = isPlatformBrowser(this._plataformId) ;
 
@@ -45,6 +47,10 @@ export class StatsComponent {
     return Array.apply(null, Array(length)).map(function () {
       return Math.round(Math.random() * max);
     });
+  }
+
+  public onVisibilityChanged(status: IntersectionStatus) {
+    this.status = status;
   }
 
   getWeeksArray() {

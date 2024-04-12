@@ -1,4 +1,14 @@
-<section id="section-features" class="section--features">
+<section 
+  id="section-features" 
+  class="section--features"
+  IntersectionObserver
+  [intersectionDebounce]="-10"
+  (visibilityChange)="onVisibilityChanged($event)"
+  [style.opacity]="status === 'Visible' ? 1 : 0"
+  [ngClass]="{
+    fadeInUp: status === 'Visible'
+  }"
+>
   <div class="section__title">
     <h3 class="font-fjalla">Features of Oasis</h3>
     <p>
@@ -9,7 +19,7 @@
   </div>
   <div class="flex--horizontal">
     <div class="features__left aligner flex--vertical">
-      <div class="flex--vertical fadeInLeft fadeInLeft--0">
+      <div class="flex--vertical fadeInLeft--0" [ngClass]="{fadeInLeft: status === 'Visible'}">
         <object
           aria-label="svg icon"
           type="image/svg+xml"
@@ -21,7 +31,7 @@
           also addressed.
         </p>
       </div>
-      <div class="flex--vertical fadeInLeft fadeInLeft--1">
+      <div class="flex--vertical fadeInLeft--1" [ngClass]="{fadeInLeft: status === 'Visible'}">
         <object
           aria-label="svg icon"
           type="image/svg+xml"
@@ -34,7 +44,7 @@
           end-user utility or experience.
         </p>
       </div>
-      <div class="flex--vertical fadeInLeft fadeInLeft--2">
+      <div class="flex--vertical fadeInLeft--2" [ngClass]="{fadeInLeft: status === 'Visible'}">
         <object
           aria-label="svg icon"
           type="image/svg+xml"
@@ -50,9 +60,7 @@
     </div>
     <app-image class="features__image" source="assets/images/features-image.png"></app-image>
     <div class="features__right aligner flex--vertical">
-      <div
-        class="flex--vertical fadeInRight fadeInRight--0"
-      >
+      <div class="flex--vertical fadeInRight--0" [ngClass]="{fadeInRight: status === 'Visible'}">
         <object
           aria-label="svg icon"
           type="image/svg+xml"
@@ -64,9 +72,7 @@
           best user experience.
         </p>
       </div>
-      <div
-        class="flex--vertical fadeInRight fadeInRight--1"
-      >
+      <div class="flex--vertical fadeInRight--1" [ngClass]="{fadeInRight: status === 'Visible'}">
         <object
           aria-label="svg icon"
           type="image/svg+xml"
@@ -78,9 +84,7 @@
           of at least 71000 km between transmitter and receiver.
         </p>
       </div>
-      <div
-        class="flex--vertical fadeInRight fadeInRight--2"
-      >
+      <div class="flex--vertical fadeInRight--2" [ngClass]="{fadeInRight: status === 'Visible'}">
         <object
           aria-label="svg icon"
           type="image/svg+xml"

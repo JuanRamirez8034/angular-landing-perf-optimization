@@ -18,6 +18,7 @@ import { HomeComponent } from './home/home.component';
 import { CalculateDatePeriodePipe } from '../pipes/calculate-date-periode.pipe';
 import { PagesRoutingModule } from './pages-routing.module';
 import { OptimizedImageModule } from '../optimized-image/optimized-image.module';
+import { IntersectionObserverDirective } from '../directives/InterceptionObserve.directive';
 
 
 
@@ -34,6 +35,7 @@ import { OptimizedImageModule } from '../optimized-image/optimized-image.module'
     ContactComponent,
     HomeComponent,
     CalculateDatePeriodePipe,
+    IntersectionObserverDirective
   ],
   imports: [
     CommonModule,

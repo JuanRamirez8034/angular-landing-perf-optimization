@@ -45,6 +45,13 @@ nav {
   }
 }
 
+.nav--desktop {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: $purple-10;
+}
+
 .nav--mobile {
   display: none;
 }

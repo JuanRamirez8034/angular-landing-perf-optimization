@@ -1,7 +1,14 @@
-<section id="section-customers" class="section--customers">
+<section 
+  id="section-customers" 
+  class="section--customers"
+  IntersectionObserver
+  [intersectionDebounce]="20"
+  (visibilityChange)="onVisibilityChanged($event)"
+  [style.opacity]="status === 'Visible' ? 1 : 0"
+>
   <div class="section__container">
     <h4 class="title">What customers are saying</h4>
-    <div class="slide__container">
+    <div class="slide__container" [ngClass]="{fadeInRight: status === 'Visible'}">
       <swiper #swiper [config]="config">
         <ng-template swiperSlide *ngFor="let customer of customers">
           <div class="flex--horizontal slide">
